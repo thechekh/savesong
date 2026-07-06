@@ -125,12 +125,28 @@ class SpotifyResolver(Resolver):
             resp = await self._client().get(
                 f"{API_BASE}{path}", params=params, headers={"Authorization": f"Bearer {token}"}
             )
+        if resp.status_code == 403:
+            raise SpotifyAuthError(
+                f"Spotify refused access (HTTP 403): {_error_detail(resp)} — "
+                "note: Spotify requires the app owner to have a Premium subscription "
+                "for Web API access in development mode"
+            )
         if resp.status_code == 404:
             raise ResolveError(f"Spotify resource not found: {path}")
         if resp.status_code != 200:
             raise ResolveError(f"Spotify API error {resp.status_code} for {path}")
         data: dict[str, Any] = resp.json()
         return data
+
+
+def _error_detail(resp: httpx.Response) -> str:
+    """Best-effort human message from a Spotify error body (JSON or plain text)."""
+    try:
+        payload = resp.json()
+        message = str((payload.get("error") or {}).get("message") or "")
+    except ValueError:
+        message = ""
+    return message or resp.text[:200].strip() or "forbidden"
 
 
 def _track_meta(track: dict[str, Any] | None) -> TrackMeta | None:

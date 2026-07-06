@@ -115,6 +115,21 @@ async def test_token_refresh_on_401(spotify_fx: dict[str, Any]) -> None:
 
 
 @respx.mock
+async def test_premium_block_403_gives_actionable_error() -> None:
+    respx.post("https://accounts.spotify.com/api/token").respond(
+        json={"access_token": "tok", "expires_in": 3600}
+    )
+    respx.get("https://api.spotify.com/v1/tracks/0VjIjW4GlUZAMYd2vXMi3b").respond(
+        status_code=403,
+        text="Active premium subscription required for the owner of the app.",
+    )
+    resolver = SpotifyResolver("id", "secret")
+    with pytest.raises(SpotifyAuthError, match="[Pp]remium"):
+        await resolver.resolve(TRACK_URL)
+    await resolver.aclose()
+
+
+@respx.mock
 async def test_not_found_raises_resolve_error() -> None:
     respx.post("https://accounts.spotify.com/api/token").respond(
         json={"access_token": "tok", "expires_in": 3600}

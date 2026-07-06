@@ -78,7 +78,11 @@ savesong get https://music.youtube.com/watch?v=...          # single track
 
 ### Spotify — needs client credentials (metadata only)
 
-1. Create an app at <https://developer.spotify.com/dashboard> (any name, no redirect URI needed).
+1. Create an app at <https://developer.spotify.com/dashboard> (any name, no redirect URI
+   needed; select only the **Web API** product).
+   > **Heads-up:** Spotify currently blocks Web API access for development-mode apps
+   > unless the app owner's account has an active **Premium** subscription — API calls
+   > return 403 otherwise. SoundCloud and YouTube Music need no keys at all.
 2. `savesong config init` and paste `client_id` / `client_secret` into
    `~/.config/savesong/config.toml` — or export `SPOTIFY_CLIENT_ID` / `SPOTIFY_CLIENT_SECRET`.
 
