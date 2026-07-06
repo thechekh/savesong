@@ -1,0 +1,505 @@
+{
+  "description": "Labeled matcher fixture set: 50 Spotify-style tracks with YT Music-style candidate lists. correct_video_id marks the acceptable audio source. All video ids are synthetic (cNN_*), durations realistic. Decoy taxonomy: music video, live, cover, remix, sped up/slowed, nightcore, instrumental/karaoke, 8D, wrong artist, extended mix.",
+  "cases": [
+    {
+      "track": {"title": "Blinding Lights", "artists": ["The Weeknd"], "album": "After Hours", "duration_ms": 200040},
+      "candidates": [
+        {"video_id": "c01_correct", "title": "Blinding Lights", "channel": "The Weeknd - Topic", "duration_s": 200, "view_count": 98000000},
+        {"video_id": "c01_decoy_a", "title": "The Weeknd - Blinding Lights (Official Video)", "channel": "TheWeekndVEVO", "duration_s": 261, "view_count": 720000000},
+        {"video_id": "c01_decoy_b", "title": "Blinding Lights (Live On Jimmy Kimmel)", "channel": "TheWeekndVEVO", "duration_s": 235, "view_count": 12000000},
+        {"video_id": "c01_decoy_c", "title": "Blinding Lights - The Weeknd (Sped Up)", "channel": "nightvibes", "duration_s": 171, "view_count": 4200000}
+      ],
+      "correct_video_id": "c01_correct"
+    },
+    {
+      "track": {"title": "Levitating (feat. DaBaby)", "artists": ["Dua Lipa", "DaBaby"], "album": "Future Nostalgia", "duration_ms": 203064},
+      "candidates": [
+        {"video_id": "c02_correct", "title": "Levitating (feat. DaBaby)", "channel": "Dua Lipa - Topic", "duration_s": 203, "view_count": 41000000},
+        {"video_id": "c02_decoy_a", "title": "Dua Lipa - Levitating Featuring DaBaby (Official Music Video)", "channel": "Dua Lipa", "duration_s": 214, "view_count": 610000000},
+        {"video_id": "c02_decoy_b", "title": "Levitating - Dua Lipa (Nightcore Remix)", "channel": "nightcorenation", "duration_s": 168, "view_count": 900000},
+        {"video_id": "c02_decoy_c", "title": "Levitating (Karaoke Version)", "channel": "Sing King", "duration_s": 203, "view_count": 3200000}
+      ],
+      "correct_video_id": "c02_correct"
+    },
+    {
+      "track": {"title": "Midnight City", "artists": ["M83"], "album": "Hurry Up, We're Dreaming", "duration_ms": 244000},
+      "candidates": [
+        {"video_id": "c03_correct", "title": "Midnight City", "channel": "M83 - Topic", "duration_s": 244, "view_count": 55000000},
+        {"video_id": "c03_decoy_a", "title": "M83 'Midnight City' Official video", "channel": "M83", "duration_s": 243, "view_count": 320000000},
+        {"video_id": "c03_decoy_b", "title": "Midnight City (Eric Prydz Private Remix)", "channel": "prognation", "duration_s": 422, "view_count": 8800000},
+        {"video_id": "c03_decoy_c", "title": "Midnight City - M83 (slowed + reverb)", "channel": "latenightloops", "duration_s": 280, "view_count": 2100000}
+      ],
+      "correct_video_id": "c03_correct"
+    },
+    {
+      "track": {"title": "Bohemian Rhapsody", "artists": ["Queen"], "album": "A Night at the Opera", "duration_ms": 354320},
+      "candidates": [
+        {"video_id": "c04_correct", "title": "Bohemian Rhapsody (Remastered 2011)", "channel": "Queen - Topic", "duration_s": 355, "view_count": 130000000},
+        {"video_id": "c04_decoy_a", "title": "Queen - Bohemian Rhapsody (Official Video Remastered)", "channel": "Queen Official", "duration_s": 359, "view_count": 1700000000},
+        {"video_id": "c04_decoy_b", "title": "Bohemian Rhapsody (Live Aid 1985)", "channel": "Queen Official", "duration_s": 391, "view_count": 98000000},
+        {"video_id": "c04_decoy_c", "title": "Bohemian Rhapsody - Queen (Piano Cover)", "channel": "keyscape", "duration_s": 344, "view_count": 5600000}
+      ],
+      "correct_video_id": "c04_correct"
+    },
+    {
+      "track": {"title": "One More Time", "artists": ["Daft Punk"], "album": "Discovery", "duration_ms": 320357},
+      "candidates": [
+        {"video_id": "c05_correct", "title": "One More Time", "channel": "Daft Punk - Topic", "duration_s": 320, "view_count": 88000000},
+        {"video_id": "c05_decoy_a", "title": "Daft Punk - One More Time (Official Video)", "channel": "Daft Punk", "duration_s": 325, "view_count": 410000000},
+        {"video_id": "c05_decoy_b", "title": "One More Time (Alive 2007 Live)", "channel": "Daft Punk", "duration_s": 384, "view_count": 27000000},
+        {"video_id": "c05_decoy_c", "title": "One More Time - 8D Audio", "channel": "8DTunes", "duration_s": 320, "view_count": 6100000}
+      ],
+      "correct_video_id": "c05_correct"
+    },
+    {
+      "track": {"title": "Take On Me", "artists": ["a-ha"], "album": "Hunting High and Low", "duration_ms": 225280},
+      "candidates": [
+        {"video_id": "c06_correct", "title": "Take On Me", "channel": "a-ha - Topic", "duration_s": 225, "view_count": 61000000},
+        {"video_id": "c06_decoy_a", "title": "a-ha - Take On Me (Official Video) [Remastered in 4K]", "channel": "a-ha", "duration_s": 245, "view_count": 2100000000},
+        {"video_id": "c06_decoy_b", "title": "Take On Me (MTV Unplugged / Live)", "channel": "a-ha", "duration_s": 254, "view_count": 130000000},
+        {"video_id": "c06_decoy_c", "title": "Take on Me - a-ha (Weezer Cover)", "channel": "weezerarchive", "duration_s": 218, "view_count": 15000000}
+      ],
+      "correct_video_id": "c06_correct"
+    },
+    {
+      "track": {"title": "Nightcall", "artists": ["Kavinsky"], "album": "OutRun", "duration_ms": 258173},
+      "candidates": [
+        {"video_id": "c07_correct", "title": "Nightcall", "channel": "Kavinsky - Topic", "duration_s": 258, "view_count": 34000000},
+        {"video_id": "c07_decoy_a", "title": "Kavinsky - Nightcall (Drive Original Movie Soundtrack) (Official Audio)", "channel": "Kavinsky", "duration_s": 258, "view_count": 260000000},
+        {"video_id": "c07_decoy_b", "title": "Nightcall (The Toxic Avenger Remix)", "channel": "recordmakers", "duration_s": 292, "view_count": 4800000},
+        {"video_id": "c07_decoy_c", "title": "Nightcall - Kavinsky (slowed to perfection)", "channel": "slowedcity", "duration_s": 301, "view_count": 9200000}
+      ],
+      "correct_video_id": "c07_correct"
+    },
+    {
+      "track": {"title": "Running Up That Hill (A Deal With God)", "artists": ["Kate Bush"], "album": "Hounds of Love", "duration_ms": 300840},
+      "candidates": [
+        {"video_id": "c08_correct", "title": "Running Up That Hill (A Deal With God)", "channel": "Kate Bush - Topic", "duration_s": 301, "view_count": 47000000},
+        {"video_id": "c08_decoy_a", "title": "Kate Bush - Running Up That Hill - Official Music Video", "channel": "Kate Bush", "duration_s": 244, "view_count": 350000000},
+        {"video_id": "c08_decoy_b", "title": "Running Up That Hill - Placebo (Cover)", "channel": "placebo", "duration_s": 296, "view_count": 41000000},
+        {"video_id": "c08_decoy_c", "title": "Running Up That Hill (Sped Up + Reverb)", "channel": "spedupsounds", "duration_s": 251, "view_count": 18000000}
+      ],
+      "correct_video_id": "c08_correct"
+    },
+    {
+      "track": {"title": "Seven Nation Army", "artists": ["The White Stripes"], "album": "Elephant", "duration_ms": 231800},
+      "candidates": [
+        {"video_id": "c09_correct", "title": "Seven Nation Army", "channel": "The White Stripes - Topic", "duration_s": 232, "view_count": 74000000},
+        {"video_id": "c09_decoy_a", "title": "The White Stripes - Seven Nation Army (Official Music Video)", "channel": "whitestripes", "duration_s": 232, "view_count": 890000000},
+        {"video_id": "c09_decoy_b", "title": "Seven Nation Army (The Glitch Mob Remix)", "channel": "glitchmob", "duration_s": 305, "view_count": 210000000},
+        {"video_id": "c09_decoy_c", "title": "Seven Nation Army - Live at Bonnaroo", "channel": "bonnaroofans", "duration_s": 264, "view_count": 7700000}
+      ],
+      "correct_video_id": "c09_correct"
+    },
+    {
+      "track": {"title": "Africa", "artists": ["TOTO"], "album": "Toto IV", "duration_ms": 295893},
+      "candidates": [
+        {"video_id": "c10_correct", "title": "Africa", "channel": "Toto - Topic", "duration_s": 296, "view_count": 120000000},
+        {"video_id": "c10_decoy_a", "title": "Toto - Africa (Official HD Video)", "channel": "totovevo", "duration_s": 275, "view_count": 1100000000},
+        {"video_id": "c10_decoy_b", "title": "Africa - Toto (Weezer Cover) (Official Audio)", "channel": "weezer", "duration_s": 236, "view_count": 96000000},
+        {"video_id": "c10_decoy_c", "title": "Africa (Live in Poland)", "channel": "totoband", "duration_s": 341, "view_count": 32000000}
+      ],
+      "correct_video_id": "c10_correct"
+    },
+    {
+      "track": {"title": "Get Lucky (feat. Pharrell Williams & Nile Rodgers)", "artists": ["Daft Punk", "Pharrell Williams", "Nile Rodgers"], "album": "Random Access Memories", "duration_ms": 369626},
+      "candidates": [
+        {"video_id": "c11_correct", "title": "Get Lucky (feat. Pharrell Williams & Nile Rodgers)", "channel": "Daft Punk - Topic", "duration_s": 369, "view_count": 51000000},
+        {"video_id": "c11_decoy_a", "title": "Daft Punk - Get Lucky (Official Audio) ft. Pharrell Williams, Nile Rodgers", "channel": "DaftPunkVEVO", "duration_s": 248, "view_count": 780000000},
+        {"video_id": "c11_decoy_b", "title": "Get Lucky (Daft Punk Cover) - Acoustic Session", "channel": "coffeehousecovers", "duration_s": 233, "view_count": 3400000},
+        {"video_id": "c11_decoy_c", "title": "Get Lucky - Daughter (BBC Radio 1 Live Lounge)", "channel": "bbcradio1", "duration_s": 274, "view_count": 19000000}
+      ],
+      "correct_video_id": "c11_correct"
+    },
+    {
+      "track": {"title": "Dreams", "artists": ["Fleetwood Mac"], "album": "Rumours", "duration_ms": 257800},
+      "candidates": [
+        {"video_id": "c12_correct", "title": "Dreams (2004 Remaster)", "channel": "Fleetwood Mac - Topic", "duration_s": 257, "view_count": 190000000},
+        {"video_id": "c12_decoy_a", "title": "Dreams", "channel": "The Cranberries - Topic", "duration_s": 272, "view_count": 88000000},
+        {"video_id": "c12_decoy_b", "title": "Fleetwood Mac - Dreams (Live 1997)", "channel": "fleetwoodmactv", "duration_s": 285, "view_count": 24000000},
+        {"video_id": "c12_decoy_c", "title": "Dreams - Fleetwood Mac (sped up tiktok version)", "channel": "viralspeed", "duration_s": 214, "view_count": 11000000}
+      ],
+      "correct_video_id": "c12_correct"
+    },
+    {
+      "track": {"title": "Smells Like Teen Spirit", "artists": ["Nirvana"], "album": "Nevermind", "duration_ms": 301920},
+      "candidates": [
+        {"video_id": "c13_correct", "title": "Smells Like Teen Spirit (Remastered 2021)", "channel": "Nirvana - Topic", "duration_s": 302, "view_count": 140000000},
+        {"video_id": "c13_decoy_a", "title": "Nirvana - Smells Like Teen Spirit (Official Music Video)", "channel": "NirvanaVEVO", "duration_s": 279, "view_count": 1900000000},
+        {"video_id": "c13_decoy_b", "title": "Smells Like Teen Spirit (Live at Reading 1992)", "channel": "NirvanaVEVO", "duration_s": 288, "view_count": 150000000},
+        {"video_id": "c13_decoy_c", "title": "Smells Like Teen Spirit - Malia J (Instrumental Trailer Version)", "channel": "trailermusic", "duration_s": 213, "view_count": 41000000}
+      ],
+      "correct_video_id": "c13_correct"
+    },
+    {
+      "track": {"title": "Clair de Lune", "artists": ["Claude Debussy", "Kamila Bydlowska"], "album": "Debussy: Complete Piano Works", "duration_ms": 289000},
+      "candidates": [
+        {"video_id": "c14_correct", "title": "Clair de Lune", "channel": "Kamila Bydlowska - Topic", "duration_s": 289, "view_count": 2400000},
+        {"video_id": "c14_decoy_a", "title": "Debussy - Clair de Lune (Extended 1 Hour Version)", "channel": "relaxclassics", "duration_s": 3600, "view_count": 66000000},
+        {"video_id": "c14_decoy_b", "title": "Clair de Lune - Debussy (Orchestral Version)", "channel": "philharmonia", "duration_s": 322, "view_count": 18000000},
+        {"video_id": "c14_decoy_c", "title": "Clair de Lune but it's lofi hip hop", "channel": "lofigarden", "duration_s": 187, "view_count": 5100000}
+      ],
+      "correct_video_id": "c14_correct"
+    },
+    {
+      "track": {"title": "Mr. Brightside", "artists": ["The Killers"], "album": "Hot Fuss", "duration_ms": 222586},
+      "candidates": [
+        {"video_id": "c15_correct", "title": "Mr. Brightside", "channel": "The Killers - Topic", "duration_s": 223, "view_count": 210000000},
+        {"video_id": "c15_decoy_a", "title": "The Killers - Mr. Brightside (Official Music Video)", "channel": "TheKillersVEVO", "duration_s": 226, "view_count": 890000000},
+        {"video_id": "c15_decoy_b", "title": "Mr. Brightside (Jacques Lu Cont's Thin White Duke Mix)", "channel": "clubclassics", "duration_s": 505, "view_count": 9600000},
+        {"video_id": "c15_decoy_c", "title": "Mr Brightside - The Killers (Live at Glastonbury 2019)", "channel": "glastofficial", "duration_s": 260, "view_count": 46000000}
+      ],
+      "correct_video_id": "c15_correct"
+    },
+    {
+      "track": {"title": "Redbone", "artists": ["Childish Gambino"], "album": "Awaken, My Love!", "duration_ms": 326933},
+      "candidates": [
+        {"video_id": "c16_correct", "title": "Redbone", "channel": "Childish Gambino - Topic", "duration_s": 327, "view_count": 310000000},
+        {"video_id": "c16_decoy_a", "title": "Childish Gambino - Redbone (Official Audio)", "channel": "DonaldGloverVEVO", "duration_s": 327, "view_count": 480000000},
+        {"video_id": "c16_decoy_b", "title": "Redbone (slowed + reverb)", "channel": "wavegarden", "duration_s": 384, "view_count": 62000000},
+        {"video_id": "c16_decoy_c", "title": "Redbone - Childish Gambino (Cover by Scary Pockets)", "channel": "scarypockets", "duration_s": 262, "view_count": 4700000}
+      ],
+      "correct_video_id": "c16_correct"
+    },
+    {
+      "track": {"title": "Wannabe", "artists": ["Spice Girls"], "album": "Spice", "duration_ms": 173066},
+      "candidates": [
+        {"video_id": "c17_correct", "title": "Wannabe", "channel": "Spice Girls - Topic", "duration_s": 173, "view_count": 91000000},
+        {"video_id": "c17_decoy_a", "title": "Spice Girls - Wannabe (Official Music Video)", "channel": "SpiceGirlsVEVO", "duration_s": 240, "view_count": 720000000},
+        {"video_id": "c17_decoy_b", "title": "Wannabe - Itzy", "channel": "ITZY - Topic", "duration_s": 191, "view_count": 130000000},
+        {"video_id": "c17_decoy_c", "title": "Wannabe (Sped Up Version)", "channel": "pitchshift", "duration_s": 147, "view_count": 8300000}
+      ],
+      "correct_video_id": "c17_correct"
+    },
+    {
+      "track": {"title": "Feel Good Inc.", "artists": ["Gorillaz"], "album": "Demon Days", "duration_ms": 222640},
+      "candidates": [
+        {"video_id": "c18_correct", "title": "Feel Good Inc.", "channel": "Gorillaz - Topic", "duration_s": 223, "view_count": 260000000},
+        {"video_id": "c18_decoy_a", "title": "Gorillaz - Feel Good Inc. (Official Video)", "channel": "Gorillaz", "duration_s": 254, "view_count": 1300000000},
+        {"video_id": "c18_decoy_b", "title": "Feel Good Inc - Gorillaz (Acoustic Cover by Reinaeiry)", "channel": "reinaeiry", "duration_s": 199, "view_count": 6200000},
+        {"video_id": "c18_decoy_c", "title": "Feel Good Inc. (Stylo Live at Demon Dayz Festival)", "channel": "gorillazlive", "duration_s": 271, "view_count": 5400000}
+      ],
+      "correct_video_id": "c18_correct"
+    },
+    {
+      "track": {"title": "Lose Yourself", "artists": ["Eminem"], "album": "8 Mile OST", "duration_ms": 326466},
+      "candidates": [
+        {"video_id": "c19_correct", "title": "Lose Yourself", "channel": "Eminem - Topic", "duration_s": 326, "view_count": 380000000},
+        {"video_id": "c19_decoy_a", "title": "Eminem - Lose Yourself [HD]", "channel": "EminemMusic", "duration_s": 320, "view_count": 1500000000},
+        {"video_id": "c19_decoy_b", "title": "Lose Yourself (Instrumental)", "channel": "beatarchive", "duration_s": 322, "view_count": 55000000},
+        {"video_id": "c19_decoy_c", "title": "Lose Yourself - Eminem (Clean Version Sped Up)", "channel": "cleanhits", "duration_s": 276, "view_count": 12000000}
+      ],
+      "correct_video_id": "c19_correct"
+    },
+    {
+      "track": {"title": "Everlong", "artists": ["Foo Fighters"], "album": "The Colour and the Shape", "duration_ms": 250546},
+      "candidates": [
+        {"video_id": "c20_correct", "title": "Everlong", "channel": "Foo Fighters - Topic", "duration_s": 251, "view_count": 130000000},
+        {"video_id": "c20_decoy_a", "title": "Foo Fighters - Everlong (Official HD Video)", "channel": "foofighters", "duration_s": 250, "view_count": 400000000},
+        {"video_id": "c20_decoy_b", "title": "Everlong (Acoustic Version)", "channel": "Foo Fighters - Topic", "duration_s": 261, "view_count": 71000000},
+        {"video_id": "c20_decoy_c", "title": "Everlong - Foo Fighters (Live at Wembley)", "channel": "livevault", "duration_s": 316, "view_count": 28000000}
+      ],
+      "correct_video_id": "c20_correct"
+    },
+    {
+      "track": {"title": "Titanium (feat. Sia)", "artists": ["David Guetta", "Sia"], "album": "Nothing but the Beat", "duration_ms": 245040},
+      "candidates": [
+        {"video_id": "c21_correct", "title": "Titanium (feat. Sia)", "channel": "David Guetta - Topic", "duration_s": 245, "view_count": 150000000},
+        {"video_id": "c21_decoy_a", "title": "David Guetta - Titanium ft. Sia (Official Video)", "channel": "DavidGuettaVEVO", "duration_s": 246, "view_count": 1400000000},
+        {"video_id": "c21_decoy_b", "title": "Titanium - Madilyn Bailey (Piano Cover)", "channel": "madilynbailey", "duration_s": 226, "view_count": 130000000},
+        {"video_id": "c21_decoy_c", "title": "Titanium (David Guetta & MORTEN Future Rave Remix)", "channel": "guettaremixes", "duration_s": 199, "view_count": 21000000}
+      ],
+      "correct_video_id": "c21_correct"
+    },
+    {
+      "track": {"title": "Somebody That I Used To Know (feat. Kimbra)", "artists": ["Gotye", "Kimbra"], "album": "Making Mirrors", "duration_ms": 244884},
+      "candidates": [
+        {"video_id": "c22_correct", "title": "Somebody That I Used To Know", "channel": "Gotye - Topic", "duration_s": 245, "view_count": 96000000},
+        {"video_id": "c22_decoy_a", "title": "Gotye - Somebody That I Used To Know (feat. Kimbra) [Official Music Video]", "channel": "gotyemusic", "duration_s": 244, "view_count": 2300000000},
+        {"video_id": "c22_decoy_b", "title": "Somebody That I Used to Know (Walk off the Earth Cover)", "channel": "walkofftheearth", "duration_s": 264, "view_count": 190000000},
+        {"video_id": "c22_decoy_c", "title": "Somebody That I Used To Know - Nightcore", "channel": "nightcoreworld", "duration_s": 199, "view_count": 7100000}
+      ],
+      "correct_video_id": "c22_correct"
+    },
+    {
+      "track": {"title": "Bad Guy", "artists": ["Billie Eilish"], "album": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?", "duration_ms": 194087},
+      "candidates": [
+        {"video_id": "c23_correct", "title": "bad guy", "channel": "Billie Eilish - Topic", "duration_s": 194, "view_count": 420000000},
+        {"video_id": "c23_decoy_a", "title": "Billie Eilish - bad guy (Official Music Video)", "channel": "BillieEilishVEVO", "duration_s": 205, "view_count": 1200000000},
+        {"video_id": "c23_decoy_b", "title": "bad guy (with Justin Bieber) [Remix]", "channel": "Billie Eilish - Topic", "duration_s": 194, "view_count": 89000000},
+        {"video_id": "c23_decoy_c", "title": "bad guy - billie eilish (cover by dodie)", "channel": "doddleoddle", "duration_s": 178, "view_count": 9400000}
+      ],
+      "correct_video_id": "c23_correct"
+    },
+    {
+      "track": {"title": "Do I Wanna Know?", "artists": ["Arctic Monkeys"], "album": "AM", "duration_ms": 272394},
+      "candidates": [
+        {"video_id": "c24_correct", "title": "Do I Wanna Know?", "channel": "Arctic Monkeys - Topic", "duration_s": 272, "view_count": 350000000},
+        {"video_id": "c24_decoy_a", "title": "Arctic Monkeys - Do I Wanna Know? (Official Video)", "channel": "ArcticMonkeysVEVO", "duration_s": 265, "view_count": 1600000000},
+        {"video_id": "c24_decoy_b", "title": "Do I Wanna Know? - Arctic Monkeys (Live at Glastonbury 2013)", "channel": "glastofficial", "duration_s": 302, "view_count": 40000000},
+        {"video_id": "c24_decoy_c", "title": "Do I Wanna Know - Hozier (Cover in the Live Lounge)", "channel": "bbcradio1", "duration_s": 258, "view_count": 23000000}
+      ],
+      "correct_video_id": "c24_correct"
+    },
+    {
+      "track": {"title": "Round and Round", "artists": ["Imagine Dragons"], "album": "Continued Silence EP", "duration_ms": 187560},
+      "candidates": [
+        {"video_id": "c25_correct", "title": "Round And Round", "channel": "Imagine Dragons - Topic", "duration_s": 188, "view_count": 12000000},
+        {"video_id": "c25_decoy_a", "title": "Round and Round", "channel": "Ratt - Topic", "duration_s": 265, "view_count": 44000000},
+        {"video_id": "c25_decoy_b", "title": "Round & Round", "channel": "Selena Gomez & The Scene - Topic", "duration_s": 187, "view_count": 31000000},
+        {"video_id": "c25_decoy_c", "title": "Imagine Dragons - Round and Round (Lyric Video)", "channel": "dragonsfanhub", "duration_s": 189, "view_count": 2600000}
+      ],
+      "correct_video_id": "c25_correct"
+    },
+    {
+      "track": {"title": "Halo", "artists": ["Beyoncé"], "album": "I Am... Sasha Fierce", "duration_ms": 261640},
+      "candidates": [
+        {"video_id": "c26_correct", "title": "Halo", "channel": "Beyoncé - Topic", "duration_s": 262, "view_count": 240000000},
+        {"video_id": "c26_decoy_a", "title": "Beyoncé - Halo (Official Video)", "channel": "BeyonceVEVO", "duration_s": 226, "view_count": 1400000000},
+        {"video_id": "c26_decoy_b", "title": "Halo - Beyoncé (Live at Wembley)", "channel": "beyhive", "duration_s": 315, "view_count": 36000000},
+        {"video_id": "c26_decoy_c", "title": "Halo (Cover) - Ane Brun", "channel": "anebrun", "duration_s": 251, "view_count": 4400000}
+      ],
+      "correct_video_id": "c26_correct"
+    },
+    {
+      "track": {"title": "Everybody Wants To Rule The World", "artists": ["Tears For Fears"], "album": "Songs From The Big Chair", "duration_ms": 251488},
+      "candidates": [
+        {"video_id": "c27_correct", "title": "Everybody Wants To Rule The World", "channel": "Tears For Fears - Topic", "duration_s": 251, "view_count": 180000000},
+        {"video_id": "c27_decoy_a", "title": "Tears For Fears - Everybody Wants To Rule The World (Official Music Video)", "channel": "TearsForFearsVEVO", "duration_s": 258, "view_count": 900000000},
+        {"video_id": "c27_decoy_b", "title": "Everybody Wants to Rule the World - Lorde", "channel": "Lorde - Topic", "duration_s": 228, "view_count": 100000000},
+        {"video_id": "c27_decoy_c", "title": "Everybody Wants To Rule The World (Sped Up)", "channel": "speedhits", "duration_s": 210, "view_count": 14000000}
+      ],
+      "correct_video_id": "c27_correct"
+    },
+    {
+      "track": {"title": "Riders on the Storm", "artists": ["The Doors"], "album": "L.A. Woman", "duration_ms": 435066},
+      "candidates": [
+        {"video_id": "c28_correct", "title": "Riders on the Storm", "channel": "The Doors - Topic", "duration_s": 435, "view_count": 150000000},
+        {"video_id": "c28_decoy_a", "title": "The Doors - Riders On The Storm (Original Version)", "channel": "thedoors", "duration_s": 426, "view_count": 310000000},
+        {"video_id": "c28_decoy_b", "title": "Riders On The Storm (Fredwreck Remix feat. Snoop Dogg)", "channel": "needforspeedost", "duration_s": 268, "view_count": 45000000},
+        {"video_id": "c28_decoy_c", "title": "Riders on the Storm - The Doors (Karaoke)", "channel": "karaokechannel", "duration_s": 434, "view_count": 1200000}
+      ],
+      "correct_video_id": "c28_correct"
+    },
+    {
+      "track": {"title": "Instant Crush (feat. Julian Casablancas)", "artists": ["Daft Punk", "Julian Casablancas"], "album": "Random Access Memories", "duration_ms": 337560},
+      "candidates": [
+        {"video_id": "c29_correct", "title": "Instant Crush (feat. Julian Casablancas)", "channel": "Daft Punk - Topic", "duration_s": 338, "view_count": 71000000},
+        {"video_id": "c29_decoy_a", "title": "Daft Punk - Instant Crush (Video) ft. Julian Casablancas", "channel": "DaftPunkVEVO", "duration_s": 338, "view_count": 410000000},
+        {"video_id": "c29_decoy_b", "title": "Instant Crush - Daft Punk (slowed + reverb)", "channel": "midnightdrive", "duration_s": 396, "view_count": 24000000},
+        {"video_id": "c29_decoy_c", "title": "Instant Crush (Live Cover by The Strokes fans)", "channel": "strokescovers", "duration_s": 312, "view_count": 800000}
+      ],
+      "correct_video_id": "c29_correct"
+    },
+    {
+      "track": {"title": "No Role Modelz", "artists": ["J. Cole"], "album": "2014 Forest Hills Drive", "duration_ms": 292799},
+      "candidates": [
+        {"video_id": "c30_correct", "title": "No Role Modelz", "channel": "J. Cole - Topic", "duration_s": 293, "view_count": 460000000},
+        {"video_id": "c30_decoy_a", "title": "J. Cole - No Role Modelz (Clean)", "channel": "cleanraps", "duration_s": 293, "view_count": 38000000},
+        {"video_id": "c30_decoy_b", "title": "No Role Modelz - J. Cole (Instrumental)", "channel": "rapinstrumentals", "duration_s": 293, "view_count": 15000000},
+        {"video_id": "c30_decoy_c", "title": "No Role Modelz (sped up)", "channel": "fastraps", "duration_s": 249, "view_count": 27000000}
+      ],
+      "correct_video_id": "c30_correct"
+    },
+    {
+      "track": {"title": "Strobe", "artists": ["deadmau5"], "album": "For Lack of a Better Name", "duration_ms": 637293},
+      "candidates": [
+        {"video_id": "c31_correct", "title": "Strobe", "channel": "deadmau5 - Topic", "duration_s": 637, "view_count": 52000000},
+        {"video_id": "c31_decoy_a", "title": "deadmau5 - Strobe (Radio Edit)", "channel": "mau5trap", "duration_s": 224, "view_count": 18000000},
+        {"video_id": "c31_decoy_b", "title": "Strobe (Com Truise Remix)", "channel": "mau5trap", "duration_s": 331, "view_count": 6200000},
+        {"video_id": "c31_decoy_c", "title": "deadmau5 - Strobe (Live @ Veld 2017)", "channel": "veldfest", "duration_s": 508, "view_count": 3900000}
+      ],
+      "correct_video_id": "c31_correct"
+    },
+    {
+      "track": {"title": "Wake Me Up", "artists": ["Avicii"], "album": "True", "duration_ms": 247426},
+      "candidates": [
+        {"video_id": "c32_correct", "title": "Wake Me Up", "channel": "Avicii - Topic", "duration_s": 247, "view_count": 520000000},
+        {"video_id": "c32_decoy_a", "title": "Avicii - Wake Me Up (Official Video)", "channel": "AviciiOfficialVEVO", "duration_s": 273, "view_count": 2300000000},
+        {"video_id": "c32_decoy_b", "title": "Wake Me Up - Avicii (Aloe Blacc Acoustic Version)", "channel": "aloeblacc", "duration_s": 224, "view_count": 65000000},
+        {"video_id": "c32_decoy_c", "title": "Wake Me Up (PANG! Remix)", "channel": "aviciiremixed", "duration_s": 219, "view_count": 5300000}
+      ],
+      "correct_video_id": "c32_correct"
+    },
+    {
+      "track": {"title": "Yellow", "artists": ["Coldplay"], "album": "Parachutes", "duration_ms": 266773},
+      "candidates": [
+        {"video_id": "c33_correct", "title": "Yellow", "channel": "Coldplay - Topic", "duration_s": 267, "view_count": 340000000},
+        {"video_id": "c33_decoy_a", "title": "Coldplay - Yellow (Official Video)", "channel": "Coldplay", "duration_s": 272, "view_count": 1300000000},
+        {"video_id": "c33_decoy_b", "title": "Yellow - Coldplay (Live in São Paulo)", "channel": "coldplaylive", "duration_s": 331, "view_count": 47000000},
+        {"video_id": "c33_decoy_c", "title": "Yellow (Katherine Ho Cover from Crazy Rich Asians)", "channel": "soundtrackhub", "duration_s": 213, "view_count": 12000000}
+      ],
+      "correct_video_id": "c33_correct"
+    },
+    {
+      "track": {"title": "The Less I Know The Better", "artists": ["Tame Impala"], "album": "Currents", "duration_ms": 216320},
+      "candidates": [
+        {"video_id": "c34_correct", "title": "The Less I Know The Better", "channel": "Tame Impala - Topic", "duration_s": 216, "view_count": 490000000},
+        {"video_id": "c34_decoy_a", "title": "Tame Impala - The Less I Know The Better (Official Video)", "channel": "tameimpala", "duration_s": 220, "view_count": 320000000},
+        {"video_id": "c34_decoy_b", "title": "The Less I Know The Better (slowed down)", "channel": "sadboihours", "duration_s": 251, "view_count": 33000000},
+        {"video_id": "c34_decoy_c", "title": "The Less I Know The Better - Bass Boosted", "channel": "bassnation", "duration_s": 216, "view_count": 8100000}
+      ],
+      "correct_video_id": "c34_correct"
+    },
+    {
+      "track": {"title": "Don't Stop Me Now", "artists": ["Queen"], "album": "Jazz", "duration_ms": 209413},
+      "candidates": [
+        {"video_id": "c35_correct", "title": "Don't Stop Me Now (Remastered 2011)", "channel": "Queen - Topic", "duration_s": 209, "view_count": 210000000},
+        {"video_id": "c35_decoy_a", "title": "Queen - Don't Stop Me Now (Official Video)", "channel": "Queen Official", "duration_s": 217, "view_count": 1000000000},
+        {"video_id": "c35_decoy_b", "title": "Don't Stop Me Now (...revisited)", "channel": "Queen Official", "duration_s": 222, "view_count": 15000000},
+        {"video_id": "c35_decoy_c", "title": "Don't Stop Me Now - McFly Cover", "channel": "mcflyofficial", "duration_s": 201, "view_count": 9800000}
+      ],
+      "correct_video_id": "c35_correct"
+    },
+    {
+      "track": {"title": "Heat Waves", "artists": ["Glass Animals"], "album": "Dreamland", "duration_ms": 238805},
+      "candidates": [
+        {"video_id": "c36_correct", "title": "Heat Waves", "channel": "Glass Animals - Topic", "duration_s": 239, "view_count": 650000000},
+        {"video_id": "c36_decoy_a", "title": "Glass Animals - Heat Waves (Official Video)", "channel": "GlassAnimalsVEVO", "duration_s": 239, "view_count": 900000000},
+        {"video_id": "c36_decoy_b", "title": "Heat Waves (slowed + reverb)", "channel": "vibecity", "duration_s": 283, "view_count": 190000000},
+        {"video_id": "c36_decoy_c", "title": "Heat Waves - Glass Animals (Live at Red Rocks)", "channel": "redrockslive", "duration_s": 262, "view_count": 11000000}
+      ],
+      "correct_video_id": "c36_correct"
+    },
+    {
+      "track": {"title": "波よせて", "artists": ["Lamp"], "album": "ゆめ", "duration_ms": 292000},
+      "candidates": [
+        {"video_id": "c37_correct", "title": "波よせて", "channel": "Lamp - Topic", "duration_s": 292, "view_count": 8800000},
+        {"video_id": "c37_decoy_a", "title": "Lamp - 波よせて (Nami Yosete) Live 2018", "channel": "lampfanpage", "duration_s": 318, "view_count": 900000},
+        {"video_id": "c37_decoy_b", "title": "波よせて - covered by Yui", "channel": "yuicovers", "duration_s": 285, "view_count": 320000},
+        {"video_id": "c37_decoy_c", "title": "japanese city pop mix ~ 波よせて and more", "channel": "citypopmixes", "duration_s": 3620, "view_count": 4100000}
+      ],
+      "correct_video_id": "c37_correct"
+    },
+    {
+      "track": {"title": "Kids", "artists": ["MGMT"], "album": "Oracular Spectacular", "duration_ms": 302840},
+      "candidates": [
+        {"video_id": "c38_correct", "title": "Kids", "channel": "MGMT - Topic", "duration_s": 303, "view_count": 220000000},
+        {"video_id": "c38_decoy_a", "title": "MGMT - Kids (Official HD Video)", "channel": "MGMTVEVO", "duration_s": 317, "view_count": 480000000},
+        {"video_id": "c38_decoy_b", "title": "Kids", "channel": "Current Joys - Topic", "duration_s": 214, "view_count": 26000000},
+        {"video_id": "c38_decoy_c", "title": "Kids - MGMT (The Kooks Cover)", "channel": "thekooks", "duration_s": 233, "view_count": 3700000}
+      ],
+      "correct_video_id": "c38_correct"
+    },
+    {
+      "track": {"title": "Weightless", "artists": ["Marconi Union"], "album": "Weightless (Ambient Transmissions Vol. 2)", "duration_ms": 479000},
+      "candidates": [
+        {"video_id": "c39_correct", "title": "Weightless", "channel": "Marconi Union - Topic", "duration_s": 479, "view_count": 21000000},
+        {"video_id": "c39_decoy_a", "title": "Marconi Union - Weightless (Official 10 Hour Version)", "channel": "justmusictv", "duration_s": 36000, "view_count": 92000000},
+        {"video_id": "c39_decoy_b", "title": "Weightless Part 2", "channel": "Marconi Union - Topic", "duration_s": 372, "view_count": 4800000},
+        {"video_id": "c39_decoy_c", "title": "Weightless - All Time Low", "channel": "All Time Low - Topic", "duration_s": 200, "view_count": 39000000}
+      ],
+      "correct_video_id": "c39_correct"
+    },
+    {
+      "track": {"title": "Sandstorm", "artists": ["Darude"], "album": "Before the Storm", "duration_ms": 225493},
+      "candidates": [
+        {"video_id": "c40_correct", "title": "Sandstorm", "channel": "Darude - Topic", "duration_s": 225, "view_count": 71000000},
+        {"video_id": "c40_decoy_a", "title": "Darude - Sandstorm (Official Music Video)", "channel": "darudevil", "duration_s": 233, "view_count": 340000000},
+        {"video_id": "c40_decoy_b", "title": "Sandstorm (Extended Mix)", "channel": "trancevault", "duration_s": 434, "view_count": 12000000},
+        {"video_id": "c40_decoy_c", "title": "Darude - Sandstorm played on 8 floppy drives", "channel": "floppotron", "duration_s": 219, "view_count": 9600000}
+      ],
+      "correct_video_id": "c40_correct"
+    },
+    {
+      "track": {"title": "Midnight City (Trentemøller Remix)", "artists": ["M83", "Trentemøller"], "album": "Midnight City Remixes", "duration_ms": 372000},
+      "candidates": [
+        {"video_id": "c41_correct", "title": "Midnight City (Trentemøller Remix)", "channel": "M83 - Topic", "duration_s": 372, "view_count": 5100000},
+        {"video_id": "c41_decoy_a", "title": "Midnight City", "channel": "M83 - Topic", "duration_s": 244, "view_count": 55000000},
+        {"video_id": "c41_decoy_b", "title": "M83 'Midnight City' Official video", "channel": "M83", "duration_s": 243, "view_count": 320000000},
+        {"video_id": "c41_decoy_c", "title": "Midnight City (Team Ghost Remix)", "channel": "m83remixarchive", "duration_s": 331, "view_count": 700000}
+      ],
+      "correct_video_id": "c41_correct"
+    },
+    {
+      "track": {"title": "One (Live)", "artists": ["Metallica"], "album": "S&M2", "duration_ms": 486000},
+      "candidates": [
+        {"video_id": "c42_correct", "title": "One (Live at Chase Center, San Francisco)", "channel": "Metallica - Topic", "duration_s": 487, "view_count": 6800000},
+        {"video_id": "c42_decoy_a", "title": "One", "channel": "Metallica - Topic", "duration_s": 446, "view_count": 190000000},
+        {"video_id": "c42_decoy_b", "title": "Metallica: One (Official Music Video)", "channel": "metallicatv", "duration_s": 467, "view_count": 340000000},
+        {"video_id": "c42_decoy_c", "title": "One - Metallica (Cover by First To Eleven)", "channel": "firsttoeleven", "duration_s": 292, "view_count": 2900000}
+      ],
+      "correct_video_id": "c42_correct"
+    },
+    {
+      "track": {"title": "Als het golft", "artists": ["Eefje de Visser"], "album": "Bitterzoet", "duration_ms": 254000},
+      "candidates": [
+        {"video_id": "c43_correct", "title": "Als het golft", "channel": "Eefje de Visser - Topic", "duration_s": 254, "view_count": 1900000},
+        {"video_id": "c43_decoy_a", "title": "Eefje de Visser - Als het golft (Live bij 3voor12)", "channel": "3voor12", "duration_s": 281, "view_count": 400000},
+        {"video_id": "c43_decoy_b", "title": "Als het golft - Eefje de Visser (Official Video)", "channel": "eefjedevisser", "duration_s": 256, "view_count": 3100000},
+        {"video_id": "c43_decoy_c", "title": "als het golft ~ slowed", "channel": "dromenwereld", "duration_s": 289, "view_count": 120000}
+      ],
+      "correct_video_id": "c43_correct"
+    },
+    {
+      "track": {"title": "Con Altura", "artists": ["ROSALÍA", "J Balvin", "El Guincho"], "album": "Con Altura", "duration_ms": 161000},
+      "candidates": [
+        {"video_id": "c44_correct", "title": "Con Altura", "channel": "ROSALÍA - Topic", "duration_s": 162, "view_count": 89000000},
+        {"video_id": "c44_decoy_a", "title": "ROSALÍA, J Balvin - Con Altura (Official Video) ft. El Guincho", "channel": "ROSALIAVEVO", "duration_s": 172, "view_count": 2000000000},
+        {"video_id": "c44_decoy_b", "title": "Con Altura - ROSALÍA (Live at the 2019 MTV VMAs)", "channel": "mtv", "duration_s": 204, "view_count": 25000000},
+        {"video_id": "c44_decoy_c", "title": "Con Altura (Sped Up TikTok)", "channel": "reggaetonrapido", "duration_s": 138, "view_count": 6600000}
+      ],
+      "correct_video_id": "c44_correct"
+    },
+    {
+      "track": {"title": "Ne me quitte pas", "artists": ["Jacques Brel"], "album": "La Valse à Mille Temps", "duration_ms": 229000},
+      "candidates": [
+        {"video_id": "c45_correct", "title": "Ne me quitte pas", "channel": "Jacques Brel - Topic", "duration_s": 229, "view_count": 30000000},
+        {"video_id": "c45_decoy_a", "title": "Ne Me Quitte Pas", "channel": "Nina Simone - Topic", "duration_s": 217, "view_count": 41000000},
+        {"video_id": "c45_decoy_b", "title": "Jacques Brel - Ne me quitte pas (Live à l'Olympia 1966)", "channel": "ina.fr", "duration_s": 254, "view_count": 18000000},
+        {"video_id": "c45_decoy_c", "title": "Ne me quitte pas - Sting & Mylène Farmer Cover", "channel": "chansoncovers", "duration_s": 240, "view_count": 2200000}
+      ],
+      "correct_video_id": "c45_correct"
+    },
+    {
+      "track": {"title": "Idea 10", "artists": ["Gibran Alcocer"], "album": "Idea 10", "duration_ms": 232000},
+      "candidates": [
+        {"video_id": "c46_correct", "title": "Idea 10", "channel": "Gibran Alcocer - Topic", "duration_s": 232, "view_count": 44000000},
+        {"video_id": "c46_decoy_a", "title": "Idea 10 - Gibran Alcocer (Slowed)", "channel": "pianoslowed", "duration_s": 274, "view_count": 26000000},
+        {"video_id": "c46_decoy_b", "title": "Idea 22", "channel": "Gibran Alcocer - Topic", "duration_s": 213, "view_count": 61000000},
+        {"video_id": "c46_decoy_c", "title": "Idea 10 (1 Hour Loop)", "channel": "loopgarden", "duration_s": 3612, "view_count": 8100000}
+      ],
+      "correct_video_id": "c46_correct"
+    },
+    {
+      "track": {"title": "Trndsttr (Lucian Remix)", "artists": ["Black Coast", "Lucian"], "album": "Trndsttr (Remixes)", "duration_ms": 209000},
+      "candidates": [
+        {"video_id": "c47_correct", "title": "Trndsttr (Lucian Remix)", "channel": "Black Coast - Topic", "duration_s": 209, "view_count": 130000000},
+        {"video_id": "c47_decoy_a", "title": "Black Coast - TRNDSTTR (feat. M. Maggie)", "channel": "Black Coast - Topic", "duration_s": 224, "view_count": 12000000},
+        {"video_id": "c47_decoy_b", "title": "TRNDSTTR (Lucian Remix) [slowed + reverb]", "channel": "aestheticsounds", "duration_s": 244, "view_count": 21000000},
+        {"video_id": "c47_decoy_c", "title": "trndsttr but you're in a bathroom at a party", "channel": "roomtones", "duration_s": 209, "view_count": 9700000}
+      ],
+      "correct_video_id": "c47_correct"
+    },
+    {
+      "track": {"title": "9 to 5", "artists": ["Dolly Parton"], "album": "9 to 5 and Odd Jobs", "duration_ms": 162706},
+      "candidates": [
+        {"video_id": "c48_correct", "title": "9 to 5", "channel": "Dolly Parton - Topic", "duration_s": 163, "view_count": 130000000},
+        {"video_id": "c48_decoy_a", "title": "Dolly Parton - 9 To 5 (Official Music Video)", "channel": "DollyPartonVEVO", "duration_s": 189, "view_count": 250000000},
+        {"video_id": "c48_decoy_b", "title": "9 to 5 - Dolly Parton (Live at Glastonbury 2014)", "channel": "glastofficial", "duration_s": 214, "view_count": 17000000},
+        {"video_id": "c48_decoy_c", "title": "9-5", "channel": "Dolly Parton's Heartstrings Cast - Topic", "duration_s": 171, "view_count": 800000}
+      ],
+      "correct_video_id": "c48_correct"
+    },
+    {
+      "track": {"title": "Verdis Quo", "artists": ["Daft Punk"], "album": "Discovery", "duration_ms": 344066},
+      "candidates": [
+        {"video_id": "c49_correct", "title": "Verdis Quo", "channel": "Daft Punk - Topic", "duration_s": 344, "view_count": 9800000},
+        {"video_id": "c49_decoy_a", "title": "Daft Punk - Veridis Quo (Official Video)", "channel": "DaftPunkVEVO", "duration_s": 347, "view_count": 63000000},
+        {"video_id": "c49_decoy_b", "title": "Veridis Quo (slowed + reverb)", "channel": "interstellavibes", "duration_s": 402, "view_count": 15000000},
+        {"video_id": "c49_decoy_c", "title": "Discovery (Full Album Mix)", "channel": "electroarchive", "duration_s": 3648, "view_count": 22000000}
+      ],
+      "correct_video_id": "c49_correct"
+    },
+    {
+      "track": {"title": "Space Song", "artists": ["Beach House"], "album": "Depression Cherry", "duration_ms": 320346},
+      "candidates": [
+        {"video_id": "c50_correct", "title": "Space Song", "channel": "Beach House - Topic", "duration_s": 320, "view_count": 380000000},
+        {"video_id": "c50_decoy_a", "title": "Beach House - Space Song (OFFICIAL AUDIO)", "channel": "Sub Pop", "duration_s": 321, "view_count": 130000000},
+        {"video_id": "c50_decoy_b", "title": "Space Song (sped up)", "channel": "spedupheaven", "duration_s": 268, "view_count": 48000000},
+        {"video_id": "c50_decoy_c", "title": "Space Song - Beach House (Live on KEXP)", "channel": "kexp", "duration_s": 341, "view_count": 21000000}
+      ],
+      "correct_video_id": "c50_correct"
+    }
+  ]
+}

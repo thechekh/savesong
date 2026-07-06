@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SaveSong — multi-source playlist downloader</title>
+<meta name="description" content="Download playlists from Spotify, SoundCloud, and YouTube Music into a tagged, organized, deduped local library. CLI + self-hosted web UI. MIT." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%2310b981'/%3E%3Cpath d='M9 17.5V8l7-1.5V15' stroke='%23020617' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='7.5' cy='17.5' r='2' fill='%23020617'/%3E%3Ccircle cx='14.5' cy='15' r='2' fill='%23020617'/%3E%3C/svg%3E" />
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #020617; color: #e2e8f0;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: #34d399; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 96px 0 48px; text-align: center; }
+  .logo { font-size: 44px; font-weight: 800; letter-spacing: -0.03em; }
+  .logo em { color: #34d399; font-style: normal; }
+  .pitch { margin: 16px auto 0; max-width: 640px; color: #94a3b8; font-size: 18px; }
+  .cta { margin-top: 28px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 10px 22px; border-radius: 10px; font-weight: 600; font-size: 15px;
+  }
+  .btn-primary { background: #10b981; color: #020617; }
+  .btn-primary:hover { background: #34d399; text-decoration: none; }
+  .btn-ghost { border: 1px solid #334155; color: #cbd5e1; }
+  .btn-ghost:hover { border-color: #34d399; text-decoration: none; }
+  .install {
+    margin: 26px auto 0; max-width: 460px; background: #0f172a; border: 1px solid #1e293b;
+    border-radius: 10px; padding: 12px 18px; font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+    font-size: 15px; color: #a7f3d0; text-align: left;
+  }
+  .install span { color: #475569; user-select: none; }
+  section { padding: 40px 0; }
+  h2 { font-size: 26px; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .sub { color: #94a3b8; margin-bottom: 24px; }
+  .shot { width: 100%; border-radius: 14px; border: 1px solid #1e293b; display: block; }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .duo { grid-template-columns: 1fr; } }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
+  .card { background: #0f172a; border: 1px solid #1e293b; border-radius: 14px; padding: 22px; }
+  .card h3 { font-size: 16px; margin-bottom: 8px; color: #f1f5f9; }
+  .card p { font-size: 14px; color: #94a3b8; }
+  .card .k { color: #34d399; font-weight: 700; }
+  footer {
+    border-top: 1px solid #1e293b; margin-top: 48px; padding: 32px 0 48px;
+    font-size: 13px; color: #64748b; text-align: center;
+  }
+  footer p + p { margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="logo"><em>Save</em>Song</div>
+  <p class="pitch">
+    Download playlists from <strong>Spotify</strong>, <strong>SoundCloud</strong>, and
+    <strong>YouTube&nbsp;Music</strong> into a tagged, organized, deduped local library —
+    one typed async engine, two frontends: a Rich CLI and a self-hosted web UI.
+  </p>
+  <div class="cta">
+    <a class="btn btn-primary" href="https://github.com/thechekh/savesong">View on GitHub</a>
+    <a class="btn btn-ghost" href="https://github.com/thechekh/savesong#quickstart">Quickstart</a>
+  </div>
+  <div class="install"><span>$</span> uv tool install savesong &nbsp;&nbsp;<span># or: docker compose up</span></div>
+</header>
+
+<section class="wrap">
+  <h2>The CLI</h2>
+  <p class="sub">Live multi-track progress bars, atomic <code>.part</code> staging (Ctrl-C never leaves partial files), and instant dedupe on re-runs.</p>
+  <img class="shot" src="demo-cli.svg" alt="SaveSong CLI downloading a playlist with parallel progress bars, then skipping everything on re-run" />
+</section>
+
+<section class="wrap">
+  <h2>The web UI</h2>
+  <p class="sub">Paste a URL, watch per-track progress stream in over SSE, browse your library with cover art. One command: <code>docker compose up</code>.</p>
+  <div class="duo">
+    <img class="shot" src="web-queue.png" alt="Queue tab with running, done, and failed job cards" />
+    <img class="shot" src="web-library.png" alt="Library tab with a cover art grid" />
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Why it's interesting</h2>
+  <p class="sub">Senior-grade internals in a fun-sized tool.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>A measurable matcher</h3>
+      <p>Spotify is metadata-only — audio is found on YouTube Music by a documented scoring
+      engine (fuzzy title/artist + duration window + rendition penalties).
+      <span class="k">50/50 top-1</span> on a labeled fixture set, gated in CI at ≥0.88.
+      Low-confidence tracks go to an interactive review queue instead of guessing.</p>
+    </div>
+    <div class="card">
+      <h3>Async engine, clean cancellation</h3>
+      <p>Bounded-concurrency downloads under an <code>asyncio.TaskGroup</code>, yt-dlp progress
+      hooks plumbed to Rich bars and SSE, staging dirs with atomic renames —
+      <span class="k">zero partial files</span> on Ctrl-C or job abort.</p>
+    </div>
+    <div class="card">
+      <h3>Library-first architecture</h3>
+      <p>One typed core (<code>savesong.core</code>) with zero logic in the frontends.
+      SQLite library for dedupe/resume/retry, mutagen tagging with cover art,
+      <code>.m3u8</code> export. <span class="k">91% coverage</span>, mypy --strict,
+      zero-network test suite on Linux + Windows.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><a href="https://github.com/thechekh/savesong">github.com/thechekh/savesong</a> · MIT license · clean-room implementation</p>
+    <p>For personal archiving of content you have rights to access. No DRM circumvention —
+    Spotify audio is never touched; audio comes from public uploads via yt-dlp.</p>
+  </div>
+</footer>
+
+</body>
+</html>

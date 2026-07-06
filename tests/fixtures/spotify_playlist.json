@@ -1,0 +1,110 @@
+{
+  "description": "Recorded Spotify Web API response shapes (client-credentials flow). Values are synthetic.",
+  "playlist": {
+    "id": "5FpYt2XoNbXvJp0k4v3Kx1",
+    "name": "Synthwave Essentials",
+    "external_urls": {"spotify": "https://open.spotify.com/playlist/5FpYt2XoNbXvJp0k4v3Kx1"}
+  },
+  "tracks_page_1": {
+    "href": "https://api.spotify.com/v1/playlists/5FpYt2XoNbXvJp0k4v3Kx1/tracks?offset=0&limit=100",
+    "items": [
+      {
+        "track": {
+          "id": "3n3Ppam7vgaVa1iaRUc9Lp",
+          "name": "Neon Coastline",
+          "duration_ms": 214000,
+          "track_number": 1,
+          "is_local": false,
+          "external_ids": {"isrc": "USXXX2600001"},
+          "artists": [{"name": "Portal Frames"}],
+          "album": {
+            "name": "Night Drive OST",
+            "release_date": "2019-05-17",
+            "images": [
+              {"url": "https://i.scdn.co/image/cover-large-001", "width": 640, "height": 640},
+              {"url": "https://i.scdn.co/image/cover-small-001", "width": 64, "height": 64}
+            ]
+          }
+        }
+      },
+      {
+        "track": {
+          "id": "7ouMYWpwJ422jRcDASZB7P",
+          "name": "Chrome Sunset (feat. Vela Ray)",
+          "duration_ms": 187500,
+          "track_number": 4,
+          "is_local": false,
+          "external_ids": {"isrc": "USXXX2600002"},
+          "artists": [{"name": "Portal Frames"}, {"name": "Vela Ray"}],
+          "album": {
+            "name": "Night Drive OST",
+            "release_date": "2019-05-17",
+            "images": [
+              {"url": "https://i.scdn.co/image/cover-large-001", "width": 640, "height": 640}
+            ]
+          }
+        }
+      },
+      {
+        "track": null
+      },
+      {
+        "track": {
+          "id": "local-file-entry",
+          "name": "Bootleg Rip",
+          "is_local": true,
+          "duration_ms": 202000,
+          "artists": [{"name": "Unknown"}],
+          "album": {"name": "", "images": []}
+        }
+      }
+    ],
+    "limit": 100,
+    "offset": 0,
+    "total": 5,
+    "next": "https://api.spotify.com/v1/playlists/5FpYt2XoNbXvJp0k4v3Kx1/tracks?offset=100&limit=100"
+  },
+  "tracks_page_2": {
+    "href": "https://api.spotify.com/v1/playlists/5FpYt2XoNbXvJp0k4v3Kx1/tracks?offset=100&limit=100",
+    "items": [
+      {
+        "track": {
+          "id": "6y0igZArWVi6Iz0rj35c1Y",
+          "name": "Analog Hearts",
+          "duration_ms": 243000,
+          "track_number": 9,
+          "is_local": false,
+          "external_ids": {"isrc": "USXXX2600003"},
+          "artists": [{"name": "Vela Ray"}],
+          "album": {
+            "name": "Afterglow",
+            "release_date": "2021-11-02",
+            "images": [
+              {"url": "https://i.scdn.co/image/cover-large-002", "width": 640, "height": 640}
+            ]
+          }
+        }
+      }
+    ],
+    "limit": 100,
+    "offset": 100,
+    "total": 5,
+    "next": null
+  },
+  "track_single": {
+    "id": "0VjIjW4GlUZAMYd2vXMi3b",
+    "name": "Neon Coastline",
+    "duration_ms": 214000,
+    "track_number": 1,
+    "is_local": false,
+    "external_ids": {"isrc": "USXXX2600001"},
+    "artists": [{"name": "Portal Frames"}],
+    "album": {
+      "name": "Night Drive OST",
+      "release_date": "2019-05-17",
+      "images": [
+        {"url": "https://i.scdn.co/image/cover-large-001", "width": 640, "height": 640}
+      ]
+    }
+  }
+}

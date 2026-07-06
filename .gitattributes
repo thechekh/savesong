@@ -1,0 +1,6 @@
+* text=auto
+*.png binary
+*.opus binary
+*.mp3 binary
+Makefile text eol=lf
+*.sh text eol=lf

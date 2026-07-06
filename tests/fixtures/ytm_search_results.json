@@ -1,0 +1,65 @@
+{
+  "description": "Recorded yt-dlp flat-extraction shape for a YouTube Music search (music.youtube.com/search?q=...). Values are synthetic.",
+  "query": "Portal Frames Neon Coastline",
+  "response": {
+    "_type": "playlist",
+    "id": "ytmusic-search",
+    "title": "Search results",
+    "entries": [
+      {
+        "id": "yt_correct01",
+        "title": "Neon Coastline",
+        "channel": "Portal Frames - Topic",
+        "uploader": "Portal Frames - Topic",
+        "duration": 214.0,
+        "view_count": 1200000,
+        "url": "https://music.youtube.com/watch?v=yt_correct01"
+      },
+      {
+        "id": "yt_decoy_mv1",
+        "title": "Portal Frames - Neon Coastline (Official Music Video)",
+        "channel": "Portal Frames",
+        "uploader": "Portal Frames",
+        "duration": 251.0,
+        "view_count": 8900000,
+        "url": "https://music.youtube.com/watch?v=yt_decoy_mv1"
+      },
+      {
+        "id": "yt_decoy_lv1",
+        "title": "Neon Coastline (Live at Grid Fest)",
+        "channel": "Portal Frames",
+        "uploader": "Portal Frames",
+        "duration": 240.0,
+        "view_count": 310000,
+        "url": "https://music.youtube.com/watch?v=yt_decoy_lv1"
+      },
+      {
+        "id": "yt_decoy_sp1",
+        "title": "Neon Coastline - Portal Frames (Sped Up)",
+        "channel": "wavespeed",
+        "uploader": "wavespeed",
+        "duration": 178.0,
+        "view_count": 95000,
+        "url": "https://music.youtube.com/watch?v=yt_decoy_sp1"
+      },
+      {
+        "id": "yt_decoy_cv1",
+        "title": "Neon Coastline (Synth Cover)",
+        "channel": "retrokeys",
+        "uploader": "retrokeys",
+        "duration": 209.0,
+        "view_count": 41000,
+        "url": "https://music.youtube.com/watch?v=yt_decoy_cv1"
+      },
+      {
+        "id": "yt_overflow1",
+        "title": "Neon Coastline (Reaction)",
+        "channel": "reactandchill",
+        "uploader": "reactandchill",
+        "duration": 601.0,
+        "view_count": 8000,
+        "url": "https://music.youtube.com/watch?v=yt_overflow1"
+      }
+    ]
+  }
+}

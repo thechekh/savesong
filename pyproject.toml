@@ -1,0 +1,102 @@
+[project]
+name = "savesong"
+version = "0.1.0"
+description = "Multi-source playlist downloader: Spotify (YT Music matching), SoundCloud, YouTube Music — tagged, organized, deduped."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "SaveSong contributors" }]
+keywords = ["music", "playlist", "downloader", "yt-dlp", "spotify", "soundcloud", "youtube-music"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Typing :: Typed",
+]
+dependencies = [
+    "yt-dlp>=2025.1.15",
+    "httpx>=0.28",
+    "rapidfuzz>=3.11",
+    "mutagen>=1.47",
+    "typer>=0.15",
+    "rich>=13.9",
+    "pydantic>=2.10",
+    "pydantic-settings>=2.7",
+    "tomli-w>=1.1",
+    "sqlalchemy[asyncio]>=2.0.36",
+    "aiosqlite>=0.20",
+    "alembic>=1.14",
+    "fastapi>=0.115",
+    "uvicorn>=0.34",
+    "sse-starlette>=2.2",
+    "arq>=0.26",
+]
+
+[project.urls]
+Homepage = "https://github.com/thechekh/savesong"
+Changelog = "https://github.com/thechekh/savesong/blob/main/CHANGELOG.md"
+
+[project.scripts]
+savesong = "savesong.cli.main:app"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.25",
+    "pytest-cov>=6.0",
+    "respx>=0.22",
+    "fakeredis>=2.26",
+    "ruff>=0.9",
+    "mypy>=1.14",
+    "pre-commit>=4.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/savesong"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+
+[tool.mypy]
+strict = true
+files = ["src/savesong"]
+python_version = "3.12"
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = ["yt_dlp", "yt_dlp.*"]
+ignore_missing_imports = true
+
+# mutagen ships no annotations; the tagger is our typed wrapper around it
+[[tool.mypy.overrides]]
+module = ["savesong.core.tagger"]
+disallow_untyped_calls = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-q"
+
+[tool.coverage.run]
+source = ["savesong"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "@overload",
+]

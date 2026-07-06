@@ -1,0 +1,83 @@
+# One command web mode: `docker compose up` → UI on http://localhost:8080
+# with a seeded demo library (no API keys, no downloads needed).
+services:
+  redis:
+    image: redis:7.4-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    volumes:
+      - redis-data:/data
+
+  migrate:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    command: sh -c "python -m savesong.db.migrate && python -m savesong.db.seed"
+    environment: &savesong-env
+      SAVESONG_MUSIC_DIR: /music
+      SAVESONG_DB_PATH: /data/savesong.db
+      SAVESONG_FORMAT: ${SAVESONG_FORMAT:-opus}
+      SAVESONG_CONCURRENCY: ${SAVESONG_CONCURRENCY:-4}
+      SAVESONG_MATCH_THRESHOLD: ${SAVESONG_MATCH_THRESHOLD:-0.72}
+      SPOTIFY_CLIENT_ID: ${SPOTIFY_CLIENT_ID:-}
+      SPOTIFY_CLIENT_SECRET: ${SPOTIFY_CLIENT_SECRET:-}
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - ./music:/music
+      - ./data:/data
+
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    environment: *savesong-env
+    depends_on:
+      redis:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    volumes:
+      - ./music:/music
+      - ./data:/data
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz', timeout=3)",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 5s
+
+  worker:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    command: arq savesong.worker.WorkerSettings
+    environment: *savesong-env
+    depends_on:
+      redis:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    volumes:
+      - ./music:/music
+      - ./data:/data
+
+  web:
+    build: ./web
+    ports:
+      # localhost-only by default; see README for LAN exposure behind auth
+      - "127.0.0.1:${SAVESONG_WEB_PORT:-8080}:80"
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  redis-data:
